@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MovieDetails">
+
+        <ImageView
+            android:id="@+id/posterImageView"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:layout_margin="0dp"
+            android:scaleType="fitXY"
+            android:tint="#6F000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/paddingSmall"
+            android:layout_marginStart="@dimen/paddingMedium"
+            android:layout_marginTop="@dimen/paddingMedium"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Title Placeholder"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/h1"
+            android:typeface="normal"
+            app:layout_constraintEnd_toEndOf="@+id/posterImageView"
+            app:layout_constraintStart_toStartOf="@+id/posterImageView"
+            app:layout_constraintTop_toTopOf="@+id/posterImageView"
+            tools:shadowColor="@android:drawable/dark_header" />
+
+        <TextView
+            android:id="@+id/ratingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/paddingSmall"
+            android:layout_marginEnd="@dimen/paddingSmall"
+            android:layout_marginStart="@dimen/paddingSmall"
+            android:layout_marginTop="@dimen/paddingSmall"
+            android:text="x.x / 10"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/releaseDateLabel"
+            app:layout_constraintEnd_toEndOf="@+id/posterImageView"
+            app:layout_constraintHorizontal_bias="0.015"
+            app:layout_constraintStart_toEndOf="@+id/ratingLabel"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+        <TextView
+            android:id="@+id/releaseDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/paddingSmall"
+            android:layout_marginEnd="@dimen/paddingSmall"
+            android:layout_marginStart="@dimen/paddingSmall"
+            android:layout_marginTop="@dimen/paddingMedium"
+            android:text="XX/XX/XXXX"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/posterImageView"
+            app:layout_constraintEnd_toEndOf="@+id/posterImageView"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toEndOf="@+id/releaseDateLabel"
+            app:layout_constraintTop_toBottomOf="@+id/ratingTextView"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="NotSibling" />
+
+        <TextView
+            android:id="@+id/ratingLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/paddingMedium"
+            android:layout_marginTop="@dimen/paddingMedium"
+            android:text="Rating: "
+            android:textColor="#ffffff"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/posterImageView"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+        <TextView
+            android:id="@+id/releaseDateLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/paddingSmall"
+            android:layout_marginStart="@dimen/paddingMedium"
+            android:layout_marginTop="@dimen/paddingMedium"
+            android:text="Released: "
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/posterImageView"
+            app:layout_constraintStart_toStartOf="@+id/posterImageView"
+            app:layout_constraintTop_toBottomOf="@+id/ratingLabel"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextView
+            android:id="@+id/overviewTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingSmall"
+            android:scrollbars="vertical"
+            android:text="Overview"
+            android:textSize="@dimen/h5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/posterImageView" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/paddingSmall"
+            android:layout_marginStart="@dimen/paddingMedium"
+            android:layout_marginTop="@dimen/paddingMedium"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Reviews"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/h3"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/reviewsRecyclerView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/reviewsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/paddingSmall"
+            android:isScrollContainer="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/overviewTextView"
+            tools:layout_editor_absoluteY="125dp">
+
+            <Button
+                android:id="@+id/watchTrailerBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/paddingMedium"
+                android:layout_marginStart="@dimen/paddingSmall"
+                android:layout_marginTop="@dimen/paddingMedium"
+                android:layout_weight="50"
+                android:padding="@dimen/paddingMedium"
+                android:text="WATCH TRAILER"
+                android:textAlignment="center"
+                android:textSize="@dimen/h5"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/overviewTextView"
+                app:layout_constraintEnd_toStartOf="@+id/favoritesBtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/posterImageView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ToggleButton
+                android:id="@+id/favoritesBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/paddingMedium"
+                android:layout_marginEnd="@dimen/paddingSmall"
+                android:layout_marginStart="@dimen/paddingSmall"
+                android:layout_marginTop="@dimen/paddingMedium"
+                android:layout_weight="50"
+                android:text="Add To Favorites"
+                android:textSize="@dimen/h5"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/overviewTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/watchTrailerBtn"
+                app:layout_constraintTop_toBottomOf="@+id/posterImageView"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
